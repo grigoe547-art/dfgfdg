@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#241039"><title>Find My Heart ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div id="load"><div class="lh">❤️</div><p>Loading our story…</p></div>
+<div id="game"></div>
+<div id="rotateHint" aria-live="polite"><div class="rotate-card"><div class="rotate-icon">📱↻</div><strong>Rotate your phone</strong><span>For the best adventure, play in landscape mode 💗</span></div></div>
+<div id="hud" class="hide"><b id="lv"></b><b id="hc"></b><span><button id="bp">⏸</button><button id="br">↻</button><button id="full" aria-label="Fullscreen">⛶</button><button class="bm">🎵</button><button class="bs">🔊</button></span></div>
+<div id="touch" class="hide"><div><button id="tl">◀</button><button id="tr">▶</button></div><button id="tj">▲</button></div>
+<div id="toast"></div>
+<section id="menu" class="screen"><div class="sun"></div><div id="fl"></div>
+<h1>Find My Heart ❤️</h1><p class="sub">Every heart has a story. This one is ours.</p>
+<div class="chars"><img src="assets/images/couple-heroes.png" alt="Our 3D game heroes"></div>
+<button id="start" class="big">START OUR ADVENTURE</button><button id="levelsBtn" class="small">CHOOSE LEVEL 🌸</button><button id="mem" class="small">OUR MEMORIES</button><div class="tg"><button class="bm">🎵</button><button class="bs">🔊</button></div></section>
+<section id="levelsScreen" class="screen hide"><h2>Choose your adventure 💗</h2><p class="sub">All three chapters are ready for you.</p><div class="levelChoices"><button class="levelChoice" data-level="0"><strong>LEVEL 1</strong><span>The Beginning 🌸</span></button><button class="levelChoice" data-level="1"><strong>LEVEL 2</strong><span>Our Memories 💕</span></button><button class="levelChoice" data-level="2"><strong>LEVEL 3</strong><span>Together Forever ❤️</span></button></div><button id="levelsBack" class="small">BACK TO MENU</button></section>
+<section id="gal" class="screen hide"><h2>Our Memories 💕</h2><div id="grid" class="grid"></div><button id="gback" class="small">BACK</button></section>
+<section id="end" class="screen hide"><div id="msg"><p style="--i:0">I started this little adventure just to remind you of something...</p><p style="--i:1">You are my favorite person, my happiest memory, and my greatest adventure.</p><p style="--i:2">If I could choose again, I would choose you every single time.</p><p style="--i:3" class="ily">I love you. ❤️</p></div><h3>THE END? NEVER. OUR STORY CONTINUES...</h3><div id="egrid" class="grid"></div><button id="again" class="big">PLAY AGAIN ❤️</button></section>
+<div id="modal" class="screen hide"></div><div id="pause" class="screen hide"><h2>Paused</h2><button id="res" class="big">RESUME</button><button id="rst" class="small">RESTART LEVEL</button><button id="restartStory" class="small">RESTART FROM LEVEL 1 ❤️</button><button id="home" class="small">MENU</button></div><div id="lb" class="screen hide"></div>
+<script>
+(function(){
+  function load(src, ok, fail){var s=document.createElement('script');s.src=src;s.onload=ok;s.onerror=fail;document.head.appendChild(s)}
+  function start(){var s=document.createElement('script');s.src='game.js';document.body.appendChild(s)}
+  load('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js',start,function(){
+    load('https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js',start,function(){
+      var l=document.getElementById('load');l.innerHTML='<div class="lh">💗</div><h2>Almost ready!</h2><p>Please check your internet connection and reload the game so the 3D engine can load.</p>';
+    });
+  });
+})();
+</script></body></html>
